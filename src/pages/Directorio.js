@@ -38,7 +38,7 @@ export function DirectorioPage() {
         try {
           const sintomasLimpios = sintomas.split('\n').map((sintoma) => sintoma.trim()).filter((sintoma) => sintoma !== '');
       
-          const response = await fetch('/buscar-especialidad', {
+          const response = await fetch('https://farma-app.onrender.com/buscar-especialidad', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

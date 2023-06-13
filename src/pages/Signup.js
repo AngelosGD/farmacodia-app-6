@@ -32,7 +32,7 @@ export function SignupPage() {
 
   //Codigo para ver si esta logeado o no, en caso de que no se expira el token y se manda un mensaje.
   useEffect(() => {
-    fetch("/userData", {
+    fetch("https://farma-app.onrender.com/userData", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -67,7 +67,7 @@ export function SignupPage() {
     const userData = token;
 
     if (token) {
-      fetch("/userData", {
+      fetch("https://farma-app.onrender.com/userData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -100,7 +100,7 @@ export function SignupPage() {
       e.preventDefault();
 
       console.log(fname, lname, email, password);
-      fetch("/register", {
+      fetch("https://farma-app.onrender.com/register", {
         method: "POST",
         crossDomain: true,
         headers: {
