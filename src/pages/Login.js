@@ -35,7 +35,7 @@ export function LoginPage() {
 
   //Codigo para ver si esta logeado o no, en caso de que no se expira el token y se manda un mensaje.
   useEffect(() => {
-    fetch("https://farmacodia-app6.onrender.com/userData", {
+    fetch("https://farma-app.onrender.com/userData", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -69,7 +69,7 @@ export function LoginPage() {
     const userData = token;
 
     if (token) {
-      fetch("https://farmacodia-app6.onrender.com/userData", {
+      fetch("https://farma-app.onrender.com/userData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

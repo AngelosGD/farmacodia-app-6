@@ -63,7 +63,7 @@ export function Contacto() {
 
   //Codigo para ver si esta logeado o no, en caso de que no se expira el token y se manda un mensaje.
   useEffect(() => {
-    fetch("http://localhost:9002/userData", {
+    fetch("https://farma-app.onrender.com/userData", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -98,7 +98,7 @@ export function Contacto() {
     const userData = token;
 
     if (token) {
-      fetch("http://localhost:9002/userData", {
+      fetch("https://farma-app.onrender.com/userData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -412,10 +412,9 @@ export function Contacto() {
               </div>
             </div>
           </section>
-          
         )}
       </div>
-        {/*Seccion del footer o pie de pagina, seccion final pue */}
+      {/*Seccion del footer o pie de pagina, seccion final pue */}
       <footer id="footer" className="footer text-center">
         <div className="section1-footer">
           <img src={LogoPng} className="img-logo-footer"></img>
@@ -450,21 +449,33 @@ export function Contacto() {
           <div className="Other-Links">
             <h2>Otros Sitios</h2>
             <div className="a-otherLinks">
-              <a href="#" className="a-link-other">Subscribirse</a>
-              <a href="#" className="a-link-other">Perfil</a>
-              <a href="#" className="a-link-other">Blog</a>
-              <a href="#" className="a-link-other">Iniciar Sesion</a>
-              <a href="#" className="a-link-other">Registrarse</a>
+              <a href="#" className="a-link-other">
+                Subscribirse
+              </a>
+              <a href="#" className="a-link-other">
+                Perfil
+              </a>
+              <a href="#" className="a-link-other">
+                Blog
+              </a>
+              <a href="#" className="a-link-other">
+                Iniciar Sesion
+              </a>
+              <a href="#" className="a-link-other">
+                Registrarse
+              </a>
             </div>
           </div>
 
           <div className="img-logo2-footer">
-                  <img src={LogoPng}></img>
+            <img src={LogoPng}></img>
           </div>
           {/*Barra derechos de autor footer */}
           <div className="barra-F-footer">
             <p className="text1-derechosAutor">Farmacodia</p>
-            <p className="text2-derechosAutor">© Derechos Reservados A - Farmacodia </p>
+            <p className="text2-derechosAutor">
+              © Derechos Reservados A - Farmacodia{" "}
+            </p>
           </div>
         </div>
       </footer>
