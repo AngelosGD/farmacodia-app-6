@@ -124,7 +124,7 @@ export function LoginPage() {
     e.preventDefault();
 
     console.log(email, password);
-    fetch("https://farmacodia-app6.onrender.com/Login", {
+    fetch("https://farma-app.onrender.com/Login", {
       method: "POST",
       crossDomain: true,
       headers: {

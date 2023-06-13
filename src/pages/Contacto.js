@@ -190,7 +190,7 @@ export function Contacto() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:9002/enviar-mensaje", {
+      await axios.post("https://farma-app.onrender.com/enviar-mensaje", {
         nombre,
         correo,
         mensaje,
