@@ -63,7 +63,7 @@ export function Contacto() {
 
   //Codigo para ver si esta logeado o no, en caso de que no se expira el token y se manda un mensaje.
   useEffect(() => {
-    fetch("https://farma-app.onrender.com/userData", {
+    fetch("/userData", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -98,7 +98,7 @@ export function Contacto() {
     const userData = token;
 
     if (token) {
-      fetch("https://farma-app.onrender.com/userData", {
+      fetch("/userData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -190,7 +190,7 @@ export function Contacto() {
     e.preventDefault();
 
     try {
-      await axios.post("https://farma-app.onrender.com/enviar-mensaje", {
+      await axios.post("/enviar-mensaje", {
         nombre,
         correo,
         mensaje,
