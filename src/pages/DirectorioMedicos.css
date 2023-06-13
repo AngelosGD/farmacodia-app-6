@@ -1,0 +1,222 @@
+
+/*Importando las fuentes de letras*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+
+/*Codigo para dar colores globales o root como se les llama en css*/
+:root{
+    --fros-blue-color: #0050d5;
+    --light-blue-color: #16c5ff;
+    --dark-color: #202020;
+    --light-gray: #dedede;
+    --dark-gray: #a1a1a0;
+    --light-color: #fff;
+    --poppins-font: 'Poppins', sans-serif;
+    --transition: all 0.3s ease-in-out;
+    --box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2)!important;
+} /*Fin de los colores globales*/
+
+/*Css para darle estilo a la seccion para buscar especialistas*/
+.directorio-main-background{
+    width: 100%;
+    height: 25rem;
+    background-color: #0050d5;
+    position: relative;
+    z-index: 2;
+}
+.directorio-titulo
+{
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 4rem;
+    color: white;
+    margin-left: 350px;  
+}
+.directorio-info{
+    margin-left: 350px;
+    justify-content: center;
+    margin-top: 0rem;
+}
+.directorio-info-1{
+    color: white;
+    font-weight: bold;
+}
+.directorio-info-2{
+    margin: .5rem;
+    color: rgb(208, 208, 208);
+    font-weight: 500;
+}
+.buscar-main-background{
+    background-color: rgba(255, 255, 255, 0.258);
+    width: 75%;
+ 
+    height: 175px;
+}
+.centrar-directorio{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tipo-cita{
+    border-radius: 8px;
+    height: 50px;
+    width: 170px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: .3s ease-in;
+
+}
+.buscar-1-opcion{
+    margin-left: 3.5rem;
+    margin-top: 2rem;
+}
+.tipo-consulta{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+}
+.tipo-cita:hover{
+    transition: .3s ease-in-out;
+    box-shadow: 0 0 10px rgb(127, 189, 255);
+    transform: scale(0.99);
+}
+.buscar-2-opcion{
+    margin-left: 27.5rem;
+    margin-top: -9.9rem;
+}
+.tipo-medico{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+}
+.tipo-especialista{
+    border-radius: 8px;
+    height: 50px;
+    width: 170px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: .3s ease-in;
+}
+.buscar-3-opcion{
+    margin-left: 70rem;
+    margin-top: -9.7rem;
+}
+.ciudad-medico{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+}
+.elegir-ciudad{
+    border-radius: 8px;
+    height: 50px;
+    width: 170px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: .3s ease-in;
+}
+.buscar-icon{
+    width: 25px;
+    height: 20px;
+}
+.boton-especialista{
+    transition: .4s ease-in;
+    width: 130px;
+    background-color: #55ff46;
+    height: 40px;
+    border-radius: 6px;
+    margin-left: 91rem;
+    display: flex;
+    margin-top: -5rem;
+    position: relative;
+    z-index: 2;
+}
+.buscar-icon{
+    margin-top: 1.2rem;
+    margin-left: .5rem;
+    cursor: pointer;
+}
+.btn-medico{
+    margin-left: 1rem;
+}
+.boton-especialista:hover{
+    transition: .6s ease-in-out;
+    transform: scale(1.02);
+}
+.directorio-fondo{
+    width: 280px;
+    height: 280px;
+    margin-top: -28.2rem;
+    margin-left: 110rem;
+    position: relative;
+    z-index: -1;
+    opacity: .85;
+}
+/*Css para darle estilos a la seccion donde pones los sintomas*/
+.sintomas-titulo{
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    color: #0050d5;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 3.5rem;
+    margin-top: 4rem;
+}
+.sintomas-text-1{
+    font-weight: 300;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.poner-sintomas{
+    transition: .3s ease-in;
+    border: 1px solid black;
+    border-radius: 6px;
+    height: 70px;
+    width: 50%;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    margin-left: 37rem;
+}
+.poner-sintomas:hover{
+    transition: .5s ease-in-out;
+    border-color: blue !important;
+}
+.obtener-especialidad-sintomas{
+    transition: .4s ease-in;
+    background-color: #2cf21a;
+    height: 60px;
+    width: 200px;
+    color: white;
+    margin-left: 60rem;
+    border-radius: 9px;
+    margin-top: 1rem;
+}
+.obtener-especialidad-sintomas:hover{
+    transition: .6s ease-in-out;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    border: 2px solid #2cf21a;
+}
+.especialidad-recomendada{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #56ff4699;
+    border-radius: 9px;
+    width: 40%;
+    height: 100px;
+    margin-left: 45rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}

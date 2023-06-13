@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --fros-blue-color: #0050d5;
+    --light-blue-color: #16c5ff;
+    --dark-color: #202020;
+    --light-gray: #dedede;
+    --dark-gray: #a1a1a0;
+    --light-color: #fff;
+    --poppins-font: 'Poppins', sans-serif;
+    --transition: all 0.3s ease-in-out;
+    --box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2)!important;
+}
+
+.header{
+    min-height: 20vh;
+}
+.moveAbout{
+    margin-top: 0vh;
+}
+.pad{
+    margin-top: 1.5vh;
+}
+/* Section About us -- Sobre Nosotros */
+.body-about{
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+.about-section{
+    background: url(../assets/images/medicos-about.png) no-repeat left;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 75px 0;
+}
+.inner-container{
+    transition: .2s ease-in;
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    box-shadow: 0 0 15px #3c8ce742;
+    padding: 60px;
+}
+.inner-container h1{
+    margin-bottom: 30px;
+    transition: .2s ease-in;
+    font-size: 30px;
+    font-weight: 900;
+}
+.text-about{
+    transition: .2s ease-in;
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+.skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    transition: .2s ease-in;
+    font-size: 13px;
+}
+.inner-container:hover{
+    transition: .4s ease-in-out;
+    background-color: #4e89e7;
+    transform: scale(.98);
+
+    .titulo-about{
+        transition: .4s ease-in-out;
+        color: white;
+    }
+    .text-about{
+        transition: .4s ease-in-out;
+        color: white;
+    }
+    .skills{
+        transition: .4s ease-in-out;
+        color: white;
+    }
+}
+.container-ourServices{
+    width: 100%;
+    height: 50vh;
+    padding: 0 8%;
+    margin-bottom:100px ;
+}
+.container-ourServices h1{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+.container-ourServices h1::after{
+    content: '';
+    background: #0050d5;
+    width: 175px;
+    height: 4.5px;
+    position: absolute;
+    bottom: -88px;
+    left:44%;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service-1{
+    margin-right: 15px;
+    transition: .2s ease-in;
+    border-radius: 8px;
+}
+.service-1 .i{
+    transition: .2s ease-in;
+    font-size: 40px;
+    margin-left:125px;
+    color: #303ef7;
+}
+.service-1 h2{
+    transition: .2s ease-in;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 8px;
+    justify-content: center;
+    display: flex;
+}
+.service-1 p{
+    transition: .2s ease-in;
+    align-content: center;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+}
+.service-1:hover{
+    transition: .5s ease-in-out;
+    transform: scale(1.02);
+    background-color: #0050d5;
+
+    .text-service-1{
+        transition: .5s ease-in-out;
+        color: white;
+    }
+    .service-1, .i{
+        transition: .5 ease-in-out;
+        color: white;
+    }
+    .service-1, h2{
+        transition: .5s ease-in-out;
+        color: white;
+    }
+    
+}
+/*Css para el servicio 2s*/
+.service-2{
+    margin-right: 15px;
+    transition: .2s ease-in;
+    border-radius: 8px;
+}
+.service-2 .i{
+    transition: .2s ease-in;
+    font-size: 40px;
+    margin-left:120px;
+    color: #303ef7;
+}
+.service-2 h2{
+    transition: .2s ease-in;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 8px;
+    justify-content: center;
+    display: flex;
+}
+.service-2 p{
+    transition: .2s ease-in;
+    align-content: center;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+}
+.service-2:hover{
+    transition: .5s ease-in-out;
+    transform: scale(1.02);
+    background-color: #0050d5;
+
+    .text-service-2{
+        transition: .5s ease-in-out;
+        color: white;
+    }
+    .service-2, .i{
+        transition: .5 ease-in-out;
+        color: white;
+    }
+    .service-2, h2{
+        transition: .5s ease-in-out;
+        color: white;
+    }
+    
+}
+/*Css para el servicio 3*/
+.service-3{
+    margin-right: 15px;
+    transition: .2s ease-in;
+    border-radius: 8px;
+}
+.service-3 .i{
+    transition: .2s ease-in;
+    font-size: 40px;
+    margin-left:115px;
+    color: #303ef7;
+}
+.service-3 h2{
+    transition: .2s ease-in;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 8px;
+    justify-content: center;
+    display: flex;
+}
+.service-3 p{
+    transition: .2s ease-in;
+    align-content: center;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+}
+.service-3:hover{
+    transition: .5s ease-in-out;
+    transform: scale(1.02);
+    background-color: #0050d5;
+
+    .text-service-3{
+        transition: .5s ease-in-out;
+        color: white;
+    }
+    .service-3, .i{
+        transition: .5 ease-in-out;
+        color: white;
+    }
+    .service-3, h2{
+        transition: .5s ease-in-out;
+        color: white;
+    }
+    
+}/*Css para el servicio 4*/
+.service-4{
+    margin-right: 15px;
+    transition: .2s ease-in;
+    border-radius: 8px;
+}
+.service-4 .i{
+    transition: .2s ease-in;
+    font-size: 40px;
+    margin-left:120px;
+    color: #303ef7;
+}
+.service-4 h2{
+    transition: .2s ease-in;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 8px;
+    justify-content: center;
+    display: flex;
+}
+.service-4 p{
+    transition: .2s ease-in;
+    align-content: center;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+}
+.service-4:hover{
+    transition: .5s ease-in-out;
+    transform: scale(1.02);
+    background-color: #0050d5;
+
+    .text-service-4{
+        transition: .5s ease-in-out;
+        color: white;
+    }
+    .service-3, .i{
+        transition: .5 ease-in-out;
+        color: white;
+    }
+    .service-4, h2{
+        transition: .5s ease-in-out;
+        color: white;
+    }
+    
+}
+/* Responsive */
+@media screen and (max-width:1000px ){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        width: 100%;
+    }
+   
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 20px;
+    }
+}

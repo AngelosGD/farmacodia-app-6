@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+/*Codigo para dar colores globales o root como se les llama en css*/
+:root{
+    --fros-blue-color: #0050d5;
+    --light-blue-color: #16c5ff;
+    --dark-color: #202020;
+    --light-gray: #dedede;
+    --dark-gray: #a1a1a0;
+    --light-color: #fff;
+    --poppins-font: 'Poppins', sans-serif;
+    --transition: all 0.3s ease-in-out;
+    --box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2)!important;
+} /*Fin de los colores globales*/
+
+.section-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: whitesmoke;
+}
+.section-contacto::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 120vh;
+    background: rgb(224, 221, 221);
+}
+.container-contacto{
+    position: relative;
+    min-width: 1000px;
+    min-height: 550px;
+    display: flex;
+    margin-top: -100px;
+    margin-right: 100px;
+}
+.container-contacto .contactInfo{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #09205a;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+    
+}
+.ubicacion{
+    align-items: center;
+    display: flex;  
+    margin-bottom: 10px; 
+}
+.tel{
+    display: flex;
+    align-items: center;
+}
+.gmail{
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+}
+
+ .contactInfo h2{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+ .contactInfo ul.info-contacto{
+    position: relative;
+    margin: 20px 0;
+}
+
+ .contactInfo ul.info-contacto li span:nth-child(1) img {
+    width: 30px;
+    min-width: 30px;
+}
+ .contactInfo ul.info-contacto li span:nth-child(1) img{
+    max-width: 100px;
+     filter: invert(1);
+}
+
+ .contactInfo ul.info-contacto li span:nth-child(2){
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.container-contacto .contactForm{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+}
+.container-contacto .contactInfo ul.sci-contact{
+    position: relative;
+    display: flex;
+}
+.container-contacto .contactInfo ul.sci-contact li{
+    list-style: none;
+    margin-right: 15px;
+}
+
+.container-contacto .contactInfo ul.sci-contact li a img {
+    width: 40px;
+    height: 40px;
+}
+
+.titulo-1-contacto{
+    font-size: 35px;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    color: #0050d5;
+
+}
+
+.lbl-nombre-contacto{
+    position: absolute;
+    transition: .5s ease-in;
+    left: 268px;
+    bottom: 381px;
+    color: rgb(188, 194, 208);
+}
+.inp-nombre-contacto{
+    transition: .2s ease-in;
+    margin-top: 20px;
+    height: 40px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgb(238, 243, 255);
+    padding: 15px;
+}
+.inp-correo-contacto{
+    transition: .2s ease-in;
+    margin-top: 20px;
+    height: 40px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgb(238, 243, 255);
+    padding: 15px;
+}.lbl-correo-contacto{
+    position: absolute;
+    left: 268px;
+    bottom: 322px;
+    color: rgb(188, 194, 208);
+}
+.inp-mensaje-contacto{
+    transition: .2s ease-in;
+    margin-top: 20px;
+    height: 120px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgb(238, 243, 255);
+    padding: 15px;
+}.lbl-mensaje-contacto{
+    position: absolute;
+    left: 268px;
+    bottom: 255px;
+    color: rgb(188, 194, 208);
+}
+.btn-enviarFormulario-contacto{
+    width: 35%;
+    height: 40px;
+    background-color: rgb(110, 253, 110);
+    border-bottom: 4px solid rgb(73, 209, 73);
+    color: white;
+}   
+.btn-enviarFormulario-contacto:hover{
+    transition: .5s ease-out;
+    transform: scale(1.02);
+}
+.move-inputs-text{
+    transform: translateX(25px);
+    opacity: 0;
+}
+
+.inp-nombre-contacto:focus{
+    background-color: white;
+    border: 2px solid #0050d5;
+    box-shadow: 3px 2px 5px 2px rgba(131, 168, 244, 0.277);
+    
+}
+.inp-correo-contacto:focus{
+    background-color: white;
+    border: 2px solid #0050d5;
+    box-shadow: 3px 2px 5px 2px rgba(131, 168, 244, 0.277);
+    
+}.inp-mensaje-contacto:focus{
+    background-color: white;
+    border: 2px solid #0050d5;
+    box-shadow: 3px 2px 5px 2px rgba(131, 168, 244, 0.277);
+    
+}

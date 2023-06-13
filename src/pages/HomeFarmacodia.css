@@ -1,0 +1,1593 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+/*Codigo para dar colores globales o root como se les llama en css*/
+:root{
+    --fros-blue-color: #0050d5;
+    --light-blue-color: #16c5ff;
+    --dark-color: #202020;
+    --light-gray: #dedede;
+    --dark-gray: #a1a1a0;
+    --light-color: #fff;
+    --poppins-font: 'Poppins', sans-serif;
+    --transition: all 0.3s ease-in-out;
+    --box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2)!important;
+} /*Fin de los colores globales*/
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-family: var(--poppins-font);
+}
+img{
+    width: 100%;
+    display: block;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--dark-color);
+}
+.bg-blue{
+    background-color: var(--fros-blue-color);
+}
+.bg-white{
+    background-color: var(--light-color);
+}
+.text-blue{
+    color: var(--fros-blue-color);
+}
+.text-white{
+    color: var(--light-color);
+}
+
+/* Css para darle estilo al boton */
+.btn, button {
+    border: none;
+    cursor: pointer;
+}
+.btn{
+    font-weight: 500;
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+.btn-white{
+    color: var(--fros-blue-color);
+}
+.btn-light-blue{
+    background-color: var(--light-blue-color);
+    color: var(--light-color);
+}
+.btn-blue{
+    background-color: var(--fros-blue-color);
+    color: var(--light-color);
+}
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.btn-group .btn{
+    width: 500px;
+    margin-top: -5rem;
+    margin-left: 7rem;
+}
+.btn-group .btn:first-child{
+    margin-bottom: 2rem;
+}
+.btn:hover{
+    border: 2px solid black;
+    box-shadow: var(--box-shadow);
+} /*Fin del css del boton*/
+
+.container{
+    max-width: 95vw;
+    align-items: center;
+    justify-content: center;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid{
+    display: grid;
+}
+
+input{
+    outline: none;
+}
+.lead{
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+/*css para dar diferentes tipos de tamaño de texto*/
+.text{
+    opacity: 0.9;
+}
+.text-md{
+    font-size:1.5rem;
+}
+.text-lg{
+    font-size:2rem;
+    font-weight: 500;
+    .text-sm{
+        font-size: 1.3rem;
+}
+
+} /*Fin del css para el tipo de tamaños de los textos*/
+.py{
+    padding: 10.9rem 0;
+}
+.text-center{
+    text-align: center;
+}
+
+/* Css para darle estilo a la barra de navegacion globalmente */
+.header{
+    min-height: 100vh;
+}
+.navbar{
+    padding-top: 17px;
+    height: 15vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pad: 3.2rem 0;
+    z-index: 999;
+}
+.navbar .container{
+    justify-content: space-between;
+}
+.navbar-brand img{
+    width: 168px;
+}
+.navbar-show-btn{
+    background-color: transparent;
+    width: 30px;
+    transition: var(--transition);
+}
+
+.navbar-show-btn, .navbar-hide-btn{
+    background-color: transparent;
+    width: 30px;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+button[class ^= navbar]:hover{
+    transform: scale(1.1);
+}
+
+.navbar-collapse{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 8rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: -3px 0 10px 4px rgba(0, 0, 0, 0.1);
+    transform: translateX(110%);
+    transition: var(--transition);
+    z-index: 1000;
+    left: 5%;
+}
+.navbar-show{
+    transform: translateX(0);
+}
+.navbar-hide-btn{
+    position: absolute;
+    right: 2rem;
+    top: 4.5rem;
+}
+.nav-item{
+    margin: 1.4rem 0;
+}
+.nav-link{
+    opacity: 0.8;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+}
+.nav-link:hover{
+    opacity: 1;
+    color: var(--fros-blue-color);
+}
+/* texto inner */
+.header-inner{
+    padding-top: 16rem;
+}
+.header-inner-left h1{
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.header-inner-left h1 span{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.header-inner-left .lead{
+    opacity: 0.9;
+}
+.header-inner-left .text{
+    margin: 5.8rem 0;
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.header-inner .btn-group{
+    justify-content: center;
+}
+.header-inner-right{
+    margin-top: 6rem;
+}
+.header-inner-right img{
+    max-width: 520px;
+    margin: 0 auto;
+}/*Fin del css de la barra de navegacion*/
+
+/*Css para el modo responsivo en dispotivios moviles*/
+@media(min-width: 450px){
+    .navbar-collapse{
+        width: 320px;
+    }
+    .btn-group .btn {
+        width: auto;
+    }
+    .btn-group .btn:first-child{
+        margin-right: 48px;
+        margin-bottom: 0;
+    }
+    
+}
+
+@media(min-width: 768px){
+    .header-inner-left h1{
+        font-size: 5.7rem;
+    }
+    
+    
+}
+
+@media(min-width:992px){
+    .header-inner{
+        padding-top: 3.2rem;
+    }
+    .header-inner .container{
+        grid-template-columns: 545px auto;
+        align-items: center;
+        height: calc(100vh - 32px);
+        position: relative;
+    }
+    .header-inner-left .text{
+        margin-left: 0;
+    }
+    .header-inner-left .btn-group{
+        justify-content: start;
+    }
+    .header-inner-right img{
+        position: relative;
+        bottom: 0;
+        right: 0;
+        padding-left: 5rem;
+    }
+    
+    
+}
+
+@media(min-width:1200px){
+    .navbar-show-btn, .navbar-hide-btn{
+        display: none;
+    }
+    .navbar-collapse{
+        transform:translateX(0);
+        position: relative;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        height: auto;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+        transition: none;
+    }
+    .navbar-nav{
+        display: flex;
+    }
+    .nav-item{
+        margin: 0;
+        margin-left: 3.5rem;
+    }
+    .nav-link{
+        color: var(--light-color);
+        opacity: 1;
+        font-weight: 500;
+        position: relative;
+    }
+    .nav-link::after{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background-color: var(--light-color);
+        opacity: 0;
+        transition: var(--transition);
+    }
+    .nav-link:hover{
+        transform: none;
+        color: var(--light-color);
+    }
+    .nav-link:hover::after{
+        opacity: 1;
+        width: 100%;
+    }
+    .moveSect{
+        bottom: 15vh;
+    }
+    .header-inner-right{
+        width: 100%;
+    }
+    .header-inner-right img{
+        transform: scale(1.3);
+        max-width: 101%;
+        left: 20px;
+        margin-top: 80px;
+    }
+    .header-inner-left{
+        margin-left: 30px;
+        margin-top: 0px;
+    }
+
+}
+
+@media(min-width: 1480px){
+    .container{
+        max-width: 81vw;
+    }
+}
+
+/* Logo transparente */
+.logoT {
+    opacity: .5;
+}
+.section-head h2{
+    margin-top: -8rem;
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+}
+.border-lines{
+    height: 1rem;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--light-gray);
+    position: relative;
+}
+.border-lines::after{
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   height: 100%;
+   width: 102px;
+   background-color: var(--light-blue-color);
+}
+.aboutt-left{
+    text-align: left;
+    margin-left: 2rem;
+}
+.aboutt-right{
+    margin-top: 16.8rem;
+}
+.aboutt-left .text{
+    margin: 5rem 0;
+}
+.about .btn-white{
+    color: var(--dark-gray);
+}
+.aboutt-right .img{
+    width: 100%;
+    max-width: 450px;
+    max-height: 400px;
+    position: relative;
+    background-color: #3983fe;
+    margin-top: -45rem;
+    margin-left: 55rem;
+}
+.aboutt-right .img img{
+    padding-bottom: -15rem;
+    max-width: 350px;
+    max-height: 300px;
+    transform: scaleX(1.00);
+}
+.aboutt-right .img::after, .aboutt-right .img::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.aboutt-right .img::after{
+    top: -56px;
+    left: 0;
+    background-color: #0060ff;
+    z-index: -1;
+}
+.Border-About{
+    margin-top: -50px;
+    background-color: white;
+    max-width: 100%;
+    height: 560px;
+    border-left: 2rem solid #0050d5;
+    border-right: 2rem solid #0060ff;
+}
+.texto-about{
+    padding-right: 45rem;
+    max-width: 900px;
+    line-height: 2.5rem;
+}
+.heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+.heading h1{
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+}
+.heading h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #4c5eaf;
+}
+.heading p{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+.container-about-home{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.about-home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-home-image{
+    flex: 1;
+    transition: .4s ease-in;
+    margin-right: 40px;
+    overflow: hidden;
+}
+.about-home-image img{
+    transition: .4s ease-in;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: .5s ease;
+}
+.about-home-image:hover{
+    transform: scale(1.08);
+}
+.about-content{
+    flex: 1;
+}
+.about-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #333;
+}
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+.saberMas{
+    transition: .3s ease;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3653e6;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+.about-content{
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+.about-content .saberMas:hover{
+    background-color: #3e4e8e;
+}
+.btn1{
+    padding: .9rem 4rem;
+    border-radius: 3rem;
+    display: inline-block;
+    background-color: var(--light-color);
+    font-weight: 500;
+    -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.2);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+.btn-white1{
+    color: var(--light-gray);
+    position: relative;
+    transform: scaleX(2.1) scaleY(1.9);
+    margin-left: 15rem;   
+}
+.btn-white1:hover{
+    transition:.6s ease-in-out;
+    color: var(--fros-blue-color);
+    border: 1px solid #3983fe;
+}
+.border-depresao{
+    border-top: 2rem solid #3983fe;
+    border-left: 0.5rem solid #0050d5;
+    border-right: 0.5rem solid #0060ff;
+    border-bottom: 1rem solid var(--fros-blue-color);
+    
+}
+.btn-regresar{
+    width: 9rem;
+    height: 6rem;
+    margin-left: 64rem;
+    margin-top: -195rem;
+    position: fixed;
+    z-index: 2;
+}
+.regresar-imagen {
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .regresar-imagen:hover {
+    transform: scale(1.1);
+  }
+  
+.regresar-imagen:active {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-out; /* Añade la transición al botón activo */
+  }
+
+  /* Seccion psicologo asociado de la pagina de Burgos */
+.depresao-t{
+    margin-left: -65px;
+    width: 104.5%;
+    max-height: 225rem;
+    background-color: rgb(242, 244, 251);
+}
+.depresao-c{
+    font-size: 35px;
+    margin-left: 42rem;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    line-height: 1.3em;
+    padding-top: 4.5rem;
+    color: rgb(93, 125, 199);
+}
+
+ .container-item {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.item {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  animation: slide 10s infinite;
+  opacity: 0;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  color: rgb(112, 93, 199);
+}
+
+.item:nth-child(1) {
+  animation-delay: 0s;
+}
+.item:nth-child(2) {
+  animation-delay: 3s;
+}
+.item:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+} 
+.boton-depresao{
+    position: relative;
+    margin-left: 65rem;
+    bottom: 5rem;
+    background-color: white;
+    height: 40px;
+    border-radius: 12px;
+    width: 175px;
+    transform: scale(1.2);
+    display: flex;
+    align-items: center;    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    color: rgb(112, 93, 199);
+    padding-left: 10px;
+    transition: .5s ease-in-out;
+}
+.visita-img{
+    width: 2.5rem;
+    height: 2.5rem;
+    color: rgb(112, 93, 199);
+    margin-left: 5px;
+    transition: .5s ease-in;
+
+}
+
+.boton-depresao:hover{
+    background-color: rgb(142, 124, 224);
+    color: white;
+    transform: scale(1.2);
+    
+    
+}
+.visita-img:hover{
+    margin-left: 10px;
+    color: #fcfbff;
+}
+
+/* Css para acomodar la parte que nos explica la pagina de burgos */
+.es-img{
+    width: 314px;
+    height: 229px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-left: 25rem;
+    box-shadow: 10px 10px 15px rgba(172, 71, 255, 0.155);
+}
+.es{
+    color: rgb(93, 125, 199);
+}
+.es1{
+    color: rgb(162, 85, 234);
+}
+.es0{
+    margin-left: 63rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-top: -22rem;
+}
+.es2{
+    font-family: 'Nunito', sans-serif;
+    margin-left: 63rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+.es3{
+    font-family: 'Nunito', sans-serif;
+    margin-left: 63rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+/*Css para dar estilo a las tarjetas de informacion breve de la pagina de burgos*/
+.card1-depresao{
+    margin-left: 25rem;
+    margin-top: 10rem;
+    background-color: white;
+    width: 320px;
+    height: 150px;
+    border-radius: 8px;
+    align-items: center;
+    box-shadow: 10px 10px 15px rgba(170, 141, 255, 0.155);
+}
+.card1-titulo{
+    color: rgb(93, 125, 199);
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    margin-left: 3rem;
+    padding: 10px;
+}
+.card1-text{
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.7rem;
+    margin-left: 3.5rem;
+    margin-top: 1rem;
+}
+/*Segunda tarjeta pagina burgos*/
+.card2-depresao{
+    margin-left: 61rem;
+    margin-top: -15rem;
+    background-color: white;
+    width: 320px;
+    height: 150px;
+    border-radius: 8px;
+    align-items: center;
+    box-shadow: 10px 10px 15px rgba(170, 141, 255, 0.155);
+
+}
+.card2-titulo{
+    color: rgb(142, 124, 224);
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 3rem;
+}
+.card2-text{
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.7rem;
+    margin-left: 3.5rem;
+    margin-top: 1rem;
+}
+/*Tercera tarjeta pagina burgos*/
+.card3-depresao{
+    margin-left: 97rem;
+    margin-top: -15rem;
+    background-color: white;
+    width: 320px;
+    height: 150px;
+    border-radius: 8px;
+    align-items: center;
+    box-shadow: 10px 10px 15px rgba(170, 141, 255, 0.155);
+}
+.card3-titulo{
+    color: rgb(93, 125, 199);
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    padding: 10px;
+    margin-right: 3rem;
+}
+.card3-text{
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.7rem;
+    margin-left: 3.5rem;
+    margin-top: 1rem;
+}
+
+/* Css para darle estilo a la seccion que explica como
+funciona el test de la pagina de burgos */
+.test-titulo{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    margin-left: 25rem;
+    font-size: 3.5rem;
+    margin-top: 10rem;
+    color: rgb(93, 125, 199);
+}
+.test-uno{
+    margin-top: 4rem;
+    margin-left: 25rem;
+    width: 500px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    transition: .4s ease-in-out;
+    border-radius: 10px;
+    background-color: white;
+
+}
+.test-1-titulo{
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 5rem;
+    color: rgba(93, 125, 199, 0.345);
+    padding: 5px;
+    transition: .4s ease-in-out;
+
+}
+.test-1-text{
+   font-family: var(--poppins-font);
+   font-weight: 400;
+   color: rgba(0, 0, 0, 0.706);
+   transition: .4s ease-in-out;
+
+}
+.test-uno:hover{
+    transition: .7s ease-in;
+    background-color: rgb(93, 125, 199);
+    transform: scale(0.98);
+    .test-1-titulo{
+        transition: .7s ease-in;
+        color: white;
+    }
+    .test-1-text{
+        transition: .7s ease-in;
+        color: white;
+    }
+}
+/*Paso 2 pagina de burgos test*/
+.test-dos{
+    margin-top: 5rem;
+    margin-left: 25rem;
+    width: 500px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    transition: .4s ease-in-out;
+    border-radius: 10px;
+    background-color: white;
+
+}
+.test-2-titulo{
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 5rem;
+    color: rgba(93, 125, 199, 0.345);
+    padding: 5px;
+    transition: .4s ease-in-out;
+}
+.test-2-text{
+    font-family: var(--poppins-font);
+   font-weight: 400;
+   color: rgba(0, 0, 0, 0.706);
+   transition: .4s ease-in-out;
+   font-size: 1.4rem;
+}
+.test-dos:hover{
+    transition: .7s ease-in;
+    background-color: rgb(142, 124, 224);
+    transform: scale(0.98);
+    .test-2-titulo{
+        transition: .7s ease-in;
+        color: white;
+    }
+    .test-2-text{
+        transition: .7s ease-in;
+        color: white;
+    }
+}
+/*3er paso test pagina de burgos*/
+.test-tres{
+    margin-top: 5rem;
+    margin-left: 25rem;
+    width: 500px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    transition: .4s ease-in-out;
+    border-radius: 10px;
+    background-color: white;
+
+}
+.test-3-titulo{
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 5rem;
+    color: rgba(93, 125, 199, 0.345);
+    padding: 5px;
+    transition: .4s ease-in-out;
+}
+.test-3-text{
+    font-family: var(--poppins-font);
+   font-weight: 400;
+   color: rgba(0, 0, 0, 0.706);
+   transition: .4s ease-in-out;
+   font-size: 1.4rem;
+}
+.test-tres:hover{
+    transition: .7s ease-in;
+    background-color: rgb(93, 125, 199);
+    transform: scale(0.98);
+
+    .test-3-titulo{
+        transition: .7s ease-in;
+        color: white;
+    }
+    .test-3-text{
+        transition: .7s ease-in;
+        color: white;
+    }
+}
+/*Boton para llevar al test en la pagina de burgos*/
+.consulta-d{
+    width: 65px;
+    filter: invert(100%);
+    height: 50px;
+    transition: .5s ease-in-out;
+}
+.boton-consulta{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 300px;
+    margin-top: 5rem;
+    margin-left: 55rem;
+    height: 60px;
+    border-radius: 8px;
+    background-color: rgb(93, 125, 199);
+    transition: .4s ease-in-out;
+}
+.consulta-t{
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    transition: .4s ease-in-out;
+    color: white;
+}
+.boton-consulta:hover{
+    transition: .6s ease-in;
+    transform: scale(.98);
+    
+    .consulta-d{
+        transition: .4s ease-out;
+        margin-left: 1.5rem;
+    }
+}
+.boton-consulta:active{
+    transition: .4s ease-in-out;
+    transform: scale(.8);
+}
+/*Css para la tarjetas de casos urgentes*/
+.casos{
+    background-color: rgba(255, 100, 100, 0.305);
+    width: 440px;
+    height: 210px;
+    border-radius: 10px;
+    margin-left: 47rem;
+    margin-top: 5rem;
+    padding: 40px;
+    margin-bottom: 1rem;
+}
+.casos-titulo{
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    color: rgba(221, 20, 20, 0.824);
+    font-size: 2rem;
+}
+.casos-text-1{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    color: rgba(252, 67, 67, 0.824);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.casos-text-2{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    color: rgba(216, 33, 33, 0.824);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/*CSS para darle estilo al footer o pie de pagina*/
+.footer{
+    background-color: var(--fros-blue-color);
+    width: 100%;
+    height: 30vh;
+    margin: 0;
+    padding: 0;
+}
+.img-logo-footer{
+    width: 140px;
+    height: 140px;
+    margin-left: 70px;
+    padding-top: 30px;
+}
+.text-redesSociales{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: -20px;
+    line-height: 14px;
+    margin-left: 65px;
+    width: 170px;
+    color: white;
+}
+.logoFacebook-footer{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    margin-top: 15px;
+    margin-left: 80px;
+}
+.logoInstagram-footer{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    margin-top: -21px;
+    margin-left: 120px;
+}
+.logoTwitter-footer{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    margin-top: -21px;
+    margin-left: 160px;
+}
+.Main-Links{
+    margin-top: -140px;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    margin-left: -400px;
+}
+.a-mainLinks{
+    font-family: 'Nunito', sans-serif;
+}
+.a-link-main{
+    transition: .4s ease-in;
+    color: rgba(231, 228, 228, 0.674);
+    font-size: 14px;
+    width: 110px;
+    margin-left: 45.2%;
+    display: flex;
+}
+.a-link-main:hover{
+    transition: .4s ease-out;
+    color: white;
+    margin-bottom: 2px solid white;
+}
+/*Css para otros links footer*/
+.Other-Links{
+    margin-top: -120px;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    margin-left: 210px;
+}
+.a-otherLinks{
+    font-family: 'Nunito', sans-serif;
+}
+.a-link-other{
+    transition: .4s ease-in;
+    color: rgba(231, 228, 228, 0.674);
+    font-size: 14px;
+    width: 110px;
+    margin-left: 45.2%;
+    display: flex;
+}
+.a-link-other:hover{
+    transition: .4s ease-out;
+    color: white;
+    margin-bottom: 2px solid white;
+}
+/*Css para el 2do logo del footer*/
+.img-logo2-footer{
+    width: 200px;
+    height: 210px;
+    margin-top: -140px;
+    margin-left: 80%;
+}
+/**Css para la barra de derechos de autor del footer*/
+.barra-F-footer{
+    border-top: 4px solid #043c96;
+    width: 100%;
+    height: 7vh;
+    background-color: #0447b3;
+    margin-top: -35px;
+}
+.text1-derechosAutor{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    font-size: 18px;
+    margin-left: 45px;
+    margin-top: 10px;
+}
+.text2-derechosAutor{
+    color: white;
+    display: flex;
+    margin-top: -29px;
+    margin-left: 75%;
+}
+/*Css para el apartado de las citass*/
+.citas-main{
+    width: 100%;
+    height: 100rem;
+    background-color: rgb(242, 244, 251);
+}
+.citas-titulo-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    color: #0060ff;
+    font-size: 40px;
+    padding-top: 70px;
+}
+.paciente-citas{
+    position: relative;
+    z-index: 1;
+    width: 356px;
+    height: 278px;
+    margin-left: 35rem;
+    margin-top: 7rem;
+    opacity: .5;
+}
+.buscar-medicos-card{
+    transition: .4s ease;
+    position: relative;
+    z-index: 2;    
+    background-color: #fcfbff;
+    width: 350px;
+    height: 300px;
+    margin-top: -25rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #3c8ce767;
+    margin-left: 45rem;    
+}
+.directorio-card{
+    transition: .4s ease;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 1rem;
+}
+.encuentra-1{
+    transition: .4s ease;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #1267f0a8;
+    justify-content: center;
+    align-items: center;
+}
+.encuentra-2{
+    transition: .4s ease;
+    color: #0052d5bd;
+}
+.encuentra-1, .encuentra-2{
+    margin: 2rem;
+    padding: 1rem;
+}
+.directorio-boton{
+    transform: scale(1.04);
+    background: #0060ff;
+    height: 50px;
+    width: 200px;
+    border-radius: 9px;
+    color: white;
+    margin: 7rem;
+    transition: .4s ease-in;
+    margin-top: 50px;
+}
+.buscar-medicos-card:hover{
+    transition: .5s ease-in-out;
+    background-color: #0060ff;
+    transform: scale(1.02);
+
+    .directorio-card{
+        transition: .7s ease-in-out;
+        color: white;
+    }
+    .encuentra-1{
+        transition: .7s ease-in-out;
+        color: #fcfbff;
+    }
+    .encuentra-2{
+        transition: .7s ease-in-out;
+        color: #d2d2d2;
+    }
+    .directorio-boton{
+        transition: .7s ease-in-out;
+        background-color: white;
+        color: #0050d5;
+    }
+}
+.directorio-boton:hover{
+    transition: .7s ease-out;
+    transform: scale(0.97)  ;
+}
+.mover-card-1{
+    margin-left: -260px;
+}
+/*Css para darle estilo a la informacion del directorio de medicos y especialistas*/
+.directorio-informacion{
+    margin-left: 85rem;
+    position: relative;
+    margin-top: -30rem;
+    justify-content: center;
+    display: flex;
+
+}
+.info-1{
+    color: #0060ff;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 250px;
+    
+}
+.info-2{
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:black;
+}
+.info-3{
+    color: rgba(0, 0, 0, 0.528);
+}
+.directorio-img-buscar{
+    max-width: 230px;
+    max-height: 240px;
+    border-radius: 8px;
+    position: relative;
+    margin-top: 1rem;
+    margin-left: 100rem;
+}
+.sintomas-card{
+    transition: .4s ease-out;
+    background-color: #0050d5;
+    width: 350px;
+    height: 300px;
+    margin-left: 80rem;
+    margin-top: 13rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #3c8ce767;
+
+}
+.consultas-card{
+    transition: .4s ease-out;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+
+}
+.sintomas-1{
+    margin-left: 1.5rem;
+    transition: .4s ease-out;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    color: whitesmoke;
+}
+.sintomas-2{
+    transition: .4s ease-out;
+    color: #e6e7ff;
+}
+.sintomas-button{
+    transition: .4s ease;
+    background-color: white;
+    color: #3983fe;
+    border-radius: 8px;
+    width: 180px;
+    height: 50px;
+    margin-left: 8rem;
+    margin-top: 2rem;
+}
+.sintomas-card:hover{
+    transition: .5s ease-in;
+    background-color: white;
+    transform: scale(1.02);    
+    .sintomas-1{
+        transition: .5s ease-in;
+        color: #0060ff;
+    }
+    .consultas-card{
+        transition: .5s ease-in;
+        color: black;
+    }
+    .sintomas-2{
+        transition: .5s ease-in;
+        color: #0050d5;
+    }
+    
+}
+.sintomas-button:hover{
+    transition: .7s ease-in-out;
+    transform: scale(.98);
+}
+/*Css para darle estilo a la info de los sintomas en la pagina principal*/
+.sintomas-informacion{
+    margin-left: 20rem;
+    max-width: 600px;
+    display: inline-block;
+    position: relative;
+    bottom: 30rem;
+}
+.info-sintomas-1{
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    font-family: var(--poppins-font);
+    font-weight: bold;
+}
+.info-sintomas-2{
+    color: rgba(0, 0, 0, 0.737);
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 2rem;
+
+}
+.info-sintomas-3{
+    color: rgba(0, 0, 0, 0.599);
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 2rem;
+
+}
+.sintomas-img{
+    width: 307px;
+    height: 185px;
+    margin-top: -28rem;
+    border-radius: 10px;
+    margin-left: 30rem;
+}
+
+/*Css para darle un poco de estilo al momento de estar logeado*/
+.text-nombre-usuario{
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    font-size: 5rem;
+    position: relative;
+}
+.boton-logout{
+    background-color: white;
+    height: 40px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    border-radius: 10px;
+    width: 100px;
+    margin-left: 4rem;
+    margin-top: -0.5rem;
+    transition: .4s ease-in;
+}
+.boton-logout:hover{
+    transition: .6s ease-out;
+    transform: scale(.96);
+}
+/*Css para darle estilo a los botones del login y del registro en la pagina principal*/
+.btn-Login{
+    transition: .3s ease-in;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transform: scale(1.2);
+    color: #000000ce;
+}
+.btn-Login:hover{
+    transition: .5s ease-in-out;
+    transform: scale(1.25);
+    color: #0050d5;
+}
+.btn-Signup{
+    transition: .3s ease-in;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #000000ce;
+    transform: scale(1.2);
+    margin-left: 230px;
+    margin-top: -40px;
+}
+.btn-Signup:hover{
+    transition: .5s ease-in-out;
+    transform: scale(1.25);
+    color: #0050d5;
+}
+.move-boton-login{
+    margin-top: -30px;
+    margin-left: 50px;
+}
+.boton-sub{
+    background-color: white;
+    height: 40px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    border-radius: 10px;
+    width: 100px;
+    margin-left: 2rem;
+    margin-top: -0.5rem;
+    transition: .4s ease-in;
+}
+.boton-sub:hover{
+    transition: .6s ease-out;
+    transform: scale(.97);
+    color: #0050d5;
+}
+/*Css para darle estilo al boton que despliega la lista del usuario si esta logeado*/
+.avatar-usuario-img{
+    transition: .3s ease-in;
+    width: 35px;
+    height: 35px;
+    margin-left: 25px;
+    margin-top: -2px;
+    filter: invert(100);
+    cursor: pointer;
+}
+.sub-menu-wrap{
+    position: absolute;
+    top:120%;
+    right:-1%;
+    width: 320px;
+    right: -400px;
+}
+
+.sub-menu{
+    background: white;
+    padding: 20px;
+    margin: 10px;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+}
+.user-info h2{
+    font-weight: 500;
+}
+.sub-menu hr{
+    border: 0;
+    height: 3px;
+    width: 100%;
+    background: black;
+    margin: 15px 0 10px;
+}
+.ver-perfil-img{
+    width: 25px;
+    height: 30px;
+}
+.subscribirse-img{
+    width: 25px;
+    height: 30px;
+}
+.logout-img{
+    width: 25px;
+    height: 30px;
+}
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+.sub-menu-link p{
+    transition: .1s ease-in;
+    width: 100%;
+}
+.sub-menu-link img{
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin: 15px;
+    width: 40px;
+    height: 40px;
+}
+.sub-menu-link:hover p{
+    transition: .3s ease-in-out;
+    font-weight: 600;
+    transform: translateX(5px);
+}
+.class-test{
+    transition: .8s ease;
+   transform: translatex(-380px);
+}
+.icon-x{
+    width: 20px;
+    height: 20px;
+    margin-left: 130px;
+    cursor: pointer;
+}
+.enc-especialistas{
+    width: 35%;
+    background-color: #183e7b;
+    height: 45px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    margin-left: 50px;
+    transform: scale(1.02);
+    transition: .2s ease-in;
+}
+.btn-test-dps{
+    position: relative;
+    width: 35%;
+    background-color: #183e7b;
+    height: 45px;
+    border-radius: 6px;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    margin-left: 50px;
+    transform: scale(1.02);
+    transition: .2s ease-in;
+}
+.btns-islogged{
+    margin-top: 10px;
+    display: flex;
+}
+.enc-especialistas:hover{
+    transition: .5s ease-out;
+    background-color: white;
+    color: #3983fe;
+    transform: scale(.98);
+}
+.btn-test-dps:hover{
+    transition: .5s ease-out;
+    background-color: white;
+    color: #3983fe;
+    transform: scale(.98);
+}

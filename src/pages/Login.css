@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+/*Codigo para dar colores globales o root como se les llama en css*/
+:root{
+    --fros-blue-color: #0050d5;
+    --light-blue-color: #16c5ff;
+    --dark-color: #202020;
+    --light-gray: #dedede;
+    --dark-gray: #a1a1a0;
+    --light-color: #fff;
+    --poppins-font: 'Poppins', sans-serif;
+    --transition: all 0.3s ease-in-out;
+    --box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2)!important;
+} /*Fin de los colores globales*/
+
+/*Css para darle estilo al form del login---inicio de sesion*/
+
+
+.main-background-loginForm{
+    background-color: #0050d5;
+    position: relative;
+    margin-top: 100px;
+    width: 60%;
+    max-height: 400px;
+    transform: translateX(260px);
+
+}
+.auth-wrapper{
+    width: 45%;
+    height: 450px;
+    position: relative;
+    background-color: #0050d5;
+    bottom: 30px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+.body-loginPage{
+    background-color: whitesmoke;
+    padding-top: 0rem;
+}
+.text-iniciar{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    color: #4e89e7;
+}
+.line-inicar-text{
+    margin-left: 95px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 50%;
+    height: 4px;
+    background-color: #0050d5;
+}
+.move-email-section{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+}
+.text-email{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.input-email{
+    width: 45%;
+    height: 35px;
+    background-color: whitesmoke;
+    border-radius: 7px;
+}
+.move-password-section{
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.text-password{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.input-password{
+    width: 55%;
+    height: 35px;
+    background-color: whitesmoke;
+    border-radius: 7px;
+}
+.move-remember-section{
+    align-items: center;
+    display: flex;
+    margin-top: 25px;
+    transform: scale(1.2);
+    justify-content: center;
+}
+.text-remember{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+.checkbox-remember:active{
+    transition: .3s ease-out;
+    transform: scale(.8);
+}
+.btn-submit{
+    background-color: #4e89e7;
+    width: 40%;
+    height: 40px;
+    color: white;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    margin-top: 20px;
+    transform: scale(1.1);
+
+    margin-left: 110px;
+}
+.move-section-admin{
+    transition: .2s ease-in;
+    position: relative;
+    bottom: -100px;
+    margin-left: 270px;
+    color: #0050d5;
+}
+.move-section-admin:hover{
+    transition: .5s ease-in-out;
+    color: black;
+}
+.registrate-titulo-1{
+    position: relative;
+    z-index: 2;
+    margin-left: 700px;
+    margin-top: -280px;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.registrate-text-1{
+    position: relative;
+    z-index: 2;
+    margin-left: 700px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    color: white;
+    width:400px;
+}
+.registrate-text-2{
+    position: relative;
+    z-index: 2;
+    margin-left: 700px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.733);
+    width:400px;
+}
+.btn-registrate{
+    transition: .3s ease-in;
+    background-color: #4e89e7;
+    margin-left: 700px;
+    position: relative;
+    width: 200px;
+    color: white;
+    height: 40px;
+    margin-top: 20px;
+    border: 2px solid white;
+}
+.btn-registrate:hover{
+    transition: .5s ease-in-out;
+    transform: scale(.94);
+}
+.logeado-login-text1{
+    font-size: 30px;
+    color: #0050d5;
+    font-family: var(--poppins-font);
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+}
+.logeado-login-text2{
+    font-size: 35px;
+    color: #4e89e7;
+    font-family: 'Nunito', sans-serif;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    font-weight: bold;
+}

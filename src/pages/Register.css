@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+/*Codigo para dar colores globales o root como se les llama en css*/
+:root{
+    --fros-blue-color: #0050d5;
+    --light-blue-color: #16c5ff;
+    --dark-color: #202020;
+    --light-gray: #dedede;
+    --dark-gray: #a1a1a0;
+    --light-color: #fff;
+    --poppins-font: 'Poppins', sans-serif;
+    --transition: all 0.3s ease-in-out;
+    --box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2)!important;
+} /*Fin de los colores globales*/
+
+.main-background-registerForm{
+    background-color: whitesmoke;
+    height: 800px;
+}
+.move-registerForm{
+    
+    padding-top: 100px;
+}
+.background-registerForm{
+    background-color: #0050d5;
+    position: relative;
+    margin-top: 0px;
+    width: 60%;
+    max-height: 400px;
+    transform: translateX(260px);
+    
+}
+.auth-wrapper-register{
+    width: 45%;
+    height: 450px;
+    position: relative;
+    background-color: #0050d5;
+    bottom: 30px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 450px;
+}
+.titulo-signup{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    color: #4e89e7;
+    padding-top: 20px;
+}
+.text-fName{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.input-fName{
+    width: 45%;
+    height: 35px;
+    background-color: whitesmoke;
+    border-radius: 7px;
+}
+.move-fname-section{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+}
+.line-registerForm{
+    margin-left: 95px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 50%;
+    height: 4px;
+    background-color: #0050d5;
+}
+.text-lName{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.input-lName{
+    width: 45%;
+    height: 35px;
+    background-color: whitesmoke;
+    border-radius: 7px;
+}
+.move-lname-section{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+.text-emailRegister{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.input-emailRegister{
+    width: 45%;
+    height: 35px;
+    background-color: whitesmoke;
+    border-radius: 7px;
+}
+.move-emailA-section{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+.text-passwordRegister{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.input-passwordRegister{
+    width: 45%;
+    height: 35px;
+    background-color: whitesmoke;
+    border-radius: 7px;
+}
+.move-passwordRegister-section{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+.btn-registerPage{
+    background-color: #4e89e7;
+    width: 40%;
+    height: 40px;
+    color: white;
+    font-family: var(--poppins-font);
+    font-weight: bold;
+    margin-top: 20px;
+    transform: scale(1.1);
+
+    margin-left: 110px;
+}
+.forgot-password{
+   margin-top: 35px;
+    color: #0050d5;
+}
+.link-sesion{
+    color: #4e89e7;
+}
+.inicia-titulo-1{
+    position: relative;
+    z-index: 2;
+    margin-left: 350px;
+    margin-top: -280px;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.inicia-text-1{
+    position: relative;
+    z-index: 2;
+    margin-left: 350px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    color: white;
+    width:400px;
+}
+.inicia-text-2{
+    position: relative;
+    z-index: 2;
+    margin-left: 350px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.733);
+    width:350px;
+}
+.btn-iniciaS{
+    transition: .3s ease-in;
+    background-color: #4e89e7;
+    margin-left: 350px;
+    position: relative;
+    width: 200px;
+    color: white;
+    height: 40px;
+    margin-top: 20px;
+    border: 2px solid white;
+}
+.btn-iniciaS:hover{
+    transition: .5s ease-in-out;
+    transform: scale(.94);
+}
+.logeado-signup-text1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: var(--poppins-font);
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 100px;
+    color: #0050d5;
+}
+.logeado-signup-text2{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    font-size: 35px;
+    color: #4e89e7;
+}
