@@ -26,6 +26,9 @@ import facebook from "../assets/images/facebook-app-symbol.png";
 import instagram from "../assets/images/instagram-app-symbol.png";
 import twitter from "../assets/images/twitter-app-symbol.png";
 import "tailwindcss/tailwind.css";
+import img2Depresao from '../assets/images/img-depresao-2.png'
+import img1Depresao from "../assets/images/img-depresao-1.png";
+import img3Depresao from '../assets/images/img-depresao-3.png'
 //Fin de los modulos de la HomePage
 
 /* Funcion para mostrar el Menu en modo responsive */
@@ -76,7 +79,7 @@ export function HomeFarmacodia() {
 
   //Codigo para ver si esta logeado o no, en caso de que no se expira el token y se manda un mensaje.
   useEffect(() => {
-    fetch("https://farma-app.onrender.com/userData", {
+    fetch("http://localhost:9002/userData", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -111,7 +114,7 @@ export function HomeFarmacodia() {
     const userData = token;
 
     if (token) {
-      fetch("https://farma-app.onrender.com/userData", {
+      fetch("http://localhost:9002/userData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -196,6 +199,11 @@ export function HomeFarmacodia() {
       }
     });
   }
+
+  const testDepresaoRed = () =>{
+    window.open('https://depresao.000webhostapp.com')
+  }
+  
 
   return (
     <body>
@@ -318,10 +326,10 @@ export function HomeFarmacodia() {
                       Bienvenido,{userData.fname}!
                     </p>
                     <section className="btns-islogged">
-                      <button className="enc-especialistas">
+                      <button className="enc-especialistas" onClick={DirectorioRed}>
                         Encontrar especialistas
                       </button>
-                      <button className="btn-test-dps">
+                      <button className="btn-test-dps" onClick={testDepresaoRed}>
                         Test De Depresion
                       </button>
                     </section>
@@ -383,7 +391,7 @@ export function HomeFarmacodia() {
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-                <a href="#" className="saberMas">
+                <a href="/About" className="saberMas">
                   Saber Mas
                 </a>
               </div>
@@ -494,8 +502,15 @@ export function HomeFarmacodia() {
                   ayuda de algun especialista ¡Como en esta Pagina¡ <br />
                 </span>
               </div>
+
+              {/*Seccion de las imagenes del test en depresao */}
+              <div class="carousel">
+                  <img src={img1Depresao} alt="Imagen 1"></img>
+                  <img src={img2Depresao} alt="Imagen 2"></img>
+                  <img src={img3Depresao} alt="Imagen 3"></img>
+              </div>
               {/* Boton para ir al test en la pagina de burgos */}
-              <button className="boton-consulta">
+              <button className="boton-consulta" onClick={testDepresaoRed}>
                 <img className="consulta-d" src={consultaD}></img>
                 <p className="consulta-t">Hacer Test En Depresao</p>
               </button>
@@ -632,7 +647,7 @@ export function HomeFarmacodia() {
               <a href="/Contacto" className="a-link-main">
                 Contacto <br />
               </a>
-              <a href="#" className="a-link-main">
+              <a href="https://depresao.000webhostapp.com" target="_blank" className="a-link-main">
                 Test Depresao <br />
               </a>
             </div>
@@ -641,19 +656,19 @@ export function HomeFarmacodia() {
           <div className="Other-Links">
             <h2>Otros Sitios</h2>
             <div className="a-otherLinks">
-              <a href="#" className="a-link-other">
+              <a href="/Subscribirse" className="a-link-other">
                 Subscribirse
               </a>
-              <a href="#" className="a-link-other">
+              <a href="/userProfile" className="a-link-other">
                 Perfil
               </a>
               <a href="#" className="a-link-other">
                 Blog
               </a>
-              <a href="#" className="a-link-other">
+              <a href="/Login" className="a-link-other">
                 Iniciar Sesion
               </a>
-              <a href="#" className="a-link-other">
+              <a href="/Signup" className="a-link-other">
                 Registrarse
               </a>
             </div>

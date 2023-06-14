@@ -175,7 +175,7 @@ export function AboutPage()
               <a href="/Contacto" className="a-link-main">
                 Contacto <br />
               </a>
-              <a href="#" className="a-link-main">
+              <a href="https://depresao.000webhostapp.com" target="_blank" className="a-link-main">
                 Test Depresao <br />
               </a>
             </div>
@@ -184,14 +184,23 @@ export function AboutPage()
           <div className="Other-Links">
             <h2>Otros Sitios</h2>
             <div className="a-otherLinks">
-              <a href="#" className="a-link-other">Subscribirse</a>
-              <a href="#" className="a-link-other">Perfil</a>
-              <a href="#" className="a-link-other">Blog</a>
-              <a href="#" className="a-link-other">Iniciar Sesion</a>
-              <a href="#" className="a-link-other">Registrarse</a>
+              <a href="/Subscribirse" className="a-link-other">
+                Subscribirse
+              </a>
+              <a href="/userProfile" className="a-link-other">
+                Perfil
+              </a>
+              <a href="#" className="a-link-other">
+                Blog
+              </a>
+              <a href="/Login" className="a-link-other">
+                Iniciar Sesion
+              </a>
+              <a href="/Signup" className="a-link-other">
+                Registrarse
+              </a>
             </div>
           </div>
-
           <div className="img-logo2-footer">
                   <img src={LogoPng}></img>
           </div>

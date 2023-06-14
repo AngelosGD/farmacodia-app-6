@@ -98,13 +98,11 @@ const TarjetaForm = () => {
           <p className="line-plan-normal"></p>
           {/*Seccion beneficios plan normal */}
           <div className="container-be-1">
-              <p className="beneficio-1-normal"> <img className="beneficio-1-img" src={cheque}></img>Beneficio 1</p>
           </div>
           <div className="container-be-2">
-              <p className="beneficio-2-normal"> <img className="beneficio-2-img" src={cheque}></img>Beneficio 2</p>
+              <p className="beneficio-2-normal"> <img className="beneficio-2-img" src={cheque}></img>Descuentos en productos</p>
           </div>
           <div className="container-be-3">
-              <p className="beneficio-3-normal"> <img className="beneficio-3-img" src={cheque}></img>Beneficio 3</p>
           </div>
           
           <br />
@@ -120,15 +118,15 @@ const TarjetaForm = () => {
           <p className="line-plan-pro"></p>
           {/*Seccion beneficios plan pro */}
           <div className="container-be-1-pro">
-            <p className="beneficio-1-pro"> <img className="beneficio-1-img-pro" src={cheque}></img>Beneficio 1 Pro</p>
+            <p className="beneficio-1-pro"> <img className="beneficio-1-img-pro" src={cheque}></img>Envios con descuento</p>
           </div>
   
           <div className="container-be-2-pro">
-            <p className="beneficio-2-pro"> <img className="beneficio-2-img-pro" src={cheque}></img>Beneficio 2 Pro</p>
+            <p className="beneficio-2-pro"> <img className="beneficio-2-img-pro" src={cheque}></img>Descuentos en consultas</p>
           </div>
   
           <div className="container-be-3-pro">
-            <p className="beneficio-3-pro"> <img className="beneficio-3-img-pro" src={cheque}></img>Beneficio 3 Pro</p>
+            <p className="beneficio-3-pro"> <img className="beneficio-3-img-pro" src={cheque}></img>Beneficios del plan normal</p>
           </div>
   
           <br />
@@ -145,13 +143,13 @@ const TarjetaForm = () => {
           {/*Seccion beneficios plan avanzado */}
           {/*Seccion beneficios plan normal */}
           <div className="container-be-1-avanzado">
-              <p className="beneficio-1-avanzado"> <img className="beneficio-1-img-avanzado" src={cheque}></img>Beneficio 1 avanzado</p>
+              <p className="beneficio-1-avanzado"> <img className="beneficio-1-img-avanzado" src={cheque}></img>Envios Gratis</p>
           </div>
           <div className="container-be-2-avanzado">
-              <p className="beneficio-2-avanzado"> <img className="beneficio-2-img-avanzado" src={cheque}></img>Beneficio 2 avanzado</p>
+              <p className="beneficio-2-avanzado"> <img className="beneficio-2-img-avanzado" src={cheque}></img>Descuento en productos</p>
           </div>
           <div className="container-be-3-avanzado">
-              <p className="beneficio-3-avanzado"> <img className="beneficio-3-img-avanzado" src={cheque}></img>Beneficio 3 avanzado</p>
+              <p className="beneficio-3-avanzado"> <img className="beneficio-3-img-avanzado" src={cheque}></img>Beneficios del plan Pro</p>
           </div>
           <br />
           <button
@@ -218,7 +216,7 @@ export function Subscribirse() {
 
  //Codigo para ver si esta logeado o no, en caso de que no se expira el token y se manda un mensaje.
  useEffect(() => {
-  fetch("https://farma-app.onrender.com/userData", {
+  fetch("http://localhost:9002/userData", {
     method: "POST",
     crossDomain: true,
     headers: {
@@ -253,7 +251,7 @@ useEffect(() => {
   const userData = token;
 
   if (token) {
-    fetch("https://farma-app.onrender.com/userData", {
+    fetch("http://localhost:9002/userData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -524,7 +522,7 @@ useEffect(() => {
               <a href="/Contacto" className="a-link-main">
                 Contacto <br />
               </a>
-              <a href="#" className="a-link-main">
+              <a href="https://depresao.000webhostapp.com" target="_blank" className="a-link-main">
                 Test Depresao <br />
               </a>
             </div>
@@ -533,14 +531,23 @@ useEffect(() => {
           <div className="Other-Links">
             <h2>Otros Sitios</h2>
             <div className="a-otherLinks">
-              <a href="#" className="a-link-other">Subscribirse</a>
-              <a href="#" className="a-link-other">Perfil</a>
-              <a href="#" className="a-link-other">Blog</a>
-              <a href="#" className="a-link-other">Iniciar Sesion</a>
-              <a href="#" className="a-link-other">Registrarse</a>
+              <a href="/Subscribirse" className="a-link-other">
+                Subscribirse
+              </a>
+              <a href="/userProfile" className="a-link-other">
+                Perfil
+              </a>
+              <a href="#" className="a-link-other">
+                Blog
+              </a>
+              <a href="/Login" className="a-link-other">
+                Iniciar Sesion
+              </a>
+              <a href="/Signup" className="a-link-other">
+                Registrarse
+              </a>
             </div>
           </div>
-
           <div className="img-logo2-footer">
                   <img src={LogoPng}></img>
           </div>

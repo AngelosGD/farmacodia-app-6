@@ -35,7 +35,7 @@ export function LoginPage() {
 
   //Codigo para ver si esta logeado o no, en caso de que no se expira el token y se manda un mensaje.
   useEffect(() => {
-    fetch("https://farma-app.onrender.com/userData", {
+    fetch("http://localhost:9002/userData", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -69,7 +69,7 @@ export function LoginPage() {
     const userData = token;
 
     if (token) {
-      fetch("https://farma-app.onrender.com/userData", {
+      fetch("http://localhost:9002/userData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -124,7 +124,7 @@ export function LoginPage() {
     e.preventDefault();
 
     console.log(email, password);
-    fetch("https://farma-app.onrender.com/Login", {
+    fetch("http://localhost:9002/Login", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -366,18 +366,7 @@ export function LoginPage() {
                   />
                 </div>
 
-                <div className="move-remember-section">
-                  <div className="">
-                    <input
-                      type="checkbox"
-                      className="checkbox-remember"
-                      id="customCheck1"
-                    />
-                    <label className="text-remember" htmlFor="customCheck1">
-                      Recuerdame
-                    </label>
-                  </div>
-                </div>
+               
 
                 <div className="mover-section-submit">
                   <button type="submit" className="btn-submit">
@@ -417,7 +406,7 @@ export function LoginPage() {
       <br />
       <br />
 {/*Seccion del footer o pie de pagina, seccion final pue */}
-<footer id="footer" className="footer text-center">
+<footer id="footer" className="footer text-center ">
         <div className="section1-footer">
           <img src={LogoPng} className="img-logo-footer"></img>
           <p className="text-redesSociales">
@@ -442,7 +431,7 @@ export function LoginPage() {
               <a href="/Contacto" className="a-link-main">
                 Contacto <br />
               </a>
-              <a href="#" className="a-link-main">
+              <a href="https://depresao.000webhostapp.com" target="_blank" className="a-link-main">
                 Test Depresao <br />
               </a>
             </div>
@@ -451,11 +440,21 @@ export function LoginPage() {
           <div className="Other-Links">
             <h2>Otros Sitios</h2>
             <div className="a-otherLinks">
-              <a href="#" className="a-link-other">Subscribirse</a>
-              <a href="#" className="a-link-other">Perfil</a>
-              <a href="#" className="a-link-other">Blog</a>
-              <a href="#" className="a-link-other">Iniciar Sesion</a>
-              <a href="#" className="a-link-other">Registrarse</a>
+              <a href="/Subscribirse" className="a-link-other">
+                Subscribirse
+              </a>
+              <a href="/userProfile" className="a-link-other">
+                Perfil
+              </a>
+              <a href="#" className="a-link-other">
+                Blog
+              </a>
+              <a href="/Login" className="a-link-other">
+                Iniciar Sesion
+              </a>
+              <a href="/Signup" className="a-link-other">
+                Registrarse
+              </a>
             </div>
           </div>
 

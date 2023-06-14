@@ -25,7 +25,7 @@ export function UserProfilePage() {
 
   //Codigo para ver si esta logeado o no, en caso de que no se expira el token y se manda un mensaje.
   useEffect(() => {
-    fetch("https://farma-app.onrender.com/userData", {
+    fetch("http://localhost:9002/userData", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -60,7 +60,7 @@ export function UserProfilePage() {
     const userData = token;
 
     if (token) {
-      fetch("https://farma-app.onrender.com/userData", {
+      fetch("http://localhost:9002/userData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -453,7 +453,7 @@ export function UserProfilePage() {
               <a href="/Contacto" className="a-link-main">
                 Contacto <br />
               </a>
-              <a href="#" className="a-link-main">
+              <a href="https://depresao.000webhostapp.com" target="_blank" className="a-link-main">
                 Test Depresao <br />
               </a>
             </div>
@@ -462,19 +462,19 @@ export function UserProfilePage() {
           <div className="Other-Links">
             <h2>Otros Sitios</h2>
             <div className="a-otherLinks">
-              <a href="#" className="a-link-other">
+              <a href="/Subscribirse" className="a-link-other">
                 Subscribirse
               </a>
-              <a href="#" className="a-link-other">
+              <a href="/userProfile" className="a-link-other">
                 Perfil
               </a>
               <a href="#" className="a-link-other">
                 Blog
               </a>
-              <a href="#" className="a-link-other">
+              <a href="/Login" className="a-link-other">
                 Iniciar Sesion
               </a>
-              <a href="#" className="a-link-other">
+              <a href="/Signup" className="a-link-other">
                 Registrarse
               </a>
             </div>

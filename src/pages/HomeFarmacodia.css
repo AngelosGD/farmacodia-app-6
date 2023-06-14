@@ -578,7 +578,7 @@ button[class ^= navbar]:hover{
     width: 9rem;
     height: 6rem;
     margin-left: 64rem;
-    margin-top: -195rem;
+    margin-top: -165rem;
     position: fixed;
     z-index: 2;
 }
@@ -1148,6 +1148,7 @@ funciona el test de la pagina de burgos */
     width: 100%;
     height: 100rem;
     background-color: rgb(242, 244, 251);
+    margin-bottom: -90px;
 }
 .citas-titulo-principal{
     display: flex;
@@ -1344,6 +1345,11 @@ funciona el test de la pagina de burgos */
     .sintomas-2{
         transition: .5s ease-in;
         color: #0050d5;
+    }
+    .sintomas-button{
+        transition: .5s ease-in;
+        background-color: #0050d5;
+        color: white;
     }
     
 }
@@ -1550,24 +1556,24 @@ funciona el test de la pagina de burgos */
     cursor: pointer;
 }
 .enc-especialistas{
-    width: 35%;
-    background-color: #183e7b;
-    height: 45px;
+    width: 40%;
+    background-color: #5f98f5;
+    height: 55px;
     border-radius: 6px;
     align-items: center;
     justify-content: center;
     display: flex;
     font-family: var(--poppins-font);
     font-weight: bold;
-    margin-left: 50px;
+    margin-left: 30px;
     transform: scale(1.02);
     transition: .2s ease-in;
 }
 .btn-test-dps{
     position: relative;
-    width: 35%;
-    background-color: #183e7b;
-    height: 45px;
+    width: 40%;
+    background-color: #5f98f5;
+    height: 55px;
     border-radius: 6px;
     font-family: var(--poppins-font);
     font-weight: bold;
@@ -1591,3 +1597,41 @@ funciona el test de la pagina de burgos */
     color: #3983fe;
     transform: scale(.98);
 }
+.carousel {
+    display: flex;
+    overflow: hidden;
+    margin-left: 55%;
+}
+  
+  .carousel img {
+    position: relative;
+    margin-top: -24%;
+    border-radius: 10px;
+    height: 40%;
+    width: 40%;
+    flex: 0 0 100%;
+    opacity: 0;
+    position: absolute;
+    animation: fade 10s infinite;
+  }
+  
+  @keyframes fade {
+    0%, 16.666% {
+      opacity: 1;
+    }
+    20%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  .carousel img:nth-child(1) {
+    animation-delay: 1s;
+  }
+  
+  .carousel img:nth-child(2) {
+    animation-delay: 4s;
+  }
+  
+  .carousel img:nth-child(3) {
+    animation-delay: 7s;
+  }
