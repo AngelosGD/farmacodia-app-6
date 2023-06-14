@@ -265,6 +265,28 @@ app.post('/enviar-mensaje', (req, res) => {
 });
 
 
+app.get('/api/citas', async (req, res) => {
+  try {
+    const citas = await Cita.find();
+    res.json(citas);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: 'Error al obtener las citas' });
+  }
+});
+
+app.post('/api/citas', async (req, res) => {
+  try {
+    const { fecha, hora, nombrePaciente, medico } = req.body;
+    const nuevaCita = new Cita({ fecha, hora, nombrePaciente, medico });
+    await nuevaCita.save();
+    res.json({ mensaje: 'Cita guardada exitosamente' });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: 'Error al guardar la cita' });
+  }
+});
+
 //Configurando el servidor
 app.listen(9002, () => {
   console.log("BE iniciado en puerto", 9002);
