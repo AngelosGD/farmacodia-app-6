@@ -21,6 +21,7 @@ import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import doctor1Neumologia from "../assets/images/doctor1-neumologia-irapuato.png";
 import { data } from "jquery";
+import Swal from "sweetalert2";
 /* mostrar el menu en responsive */
 
 const localizer = momentLocalizer(moment);
@@ -165,6 +166,68 @@ export function DirectorioPage() {
   const enriqueJRed = () => {
     window.open("https://www.facebook.com/neumologopediatraenirapuato/");
   };
+
+
+  const [formData, setFormData] = useState({
+    nombre: '',
+    apellidoPaterno: '',
+    apellidoMaterno: '',
+    fechaNacimiento: '',
+    sexo: '',
+    correo: '',
+    telefono: '',
+  });
+
+  const handleInputChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    Swal.fire({
+      title: 'Haras una cita',
+      text: '¿Seguro que quieres reservar una cita?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#88ff59',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si',
+      cancelButtonText: 'No, me equivoqué',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .post('http://localhost:9002/api/formdata', formData)
+          .then(() => {
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: 'La cita ha sido agendada correctamente',
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            setFormData({
+              nombre: '',
+              apellidoPaterno: '',
+              apellidoMaterno: '',
+              fechaNacimiento: '',
+              sexo: '',
+              correo: '',
+              telefono: '',
+            });
+          })
+          .catch((err) => {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Hubo un error al agendar la cita. Por favor, intenta nuevamente.',
+            });
+          });
+      }
+    });
+  };
+
   return (
     <body>
       {/* Navbar Navigation -- Barra De Navegacion entre paginas */}
@@ -419,79 +482,80 @@ export function DirectorioPage() {
                   onSelectSlot={handleSlotSelect}
                 />
                 {showForm && (
-                  <form className="calendar-form" onSubmit={handleFormSubmit}>
-                    {" "}
-                    {/* Aplica los estilos al formulario */}
-                    <div className="form-citasDirectorio-medGeneral">
-                      <span className="datosPaciente-medGen">
-                        Datos del paciente
-                      </span>
-
-                      <span className="nombrePaciente-medGen">Nombre(s)</span>
-                      <input
-                        type="text"
-                        required={true}
-                        className="inpPaciente-medGen"
-                      ></input>
-                      <span className="apellidoPaciente-medGen">
-                        Apellido Paterno
-                      </span>
-                      <input
-                        type="text"
-                        required={true}
-                        className="inpApellido-medGen"
-                      ></input>
-                      <span className="apellidoMPaciente-medGen">
-                        Apellido materno
-                      </span>
-                      <input
-                        type="text"
-                        required={true}
-                        className="inpApellidoM-medGen"
-                      ></input>
-                      <span className="fechaN-medGen">Fecha de nacimiento</span>
-                      <input
-                        type="date"
-                        required={true}
-                        className="inpFechaN-medGen"
-                        placeholder="dd/mm/yy"
-                      ></input>
-                      <span className="sexo-medGen">Sexo</span>
-
-                      <select className="slcSexo-medGen">
-                        <option disabled selected>
-                          Escoje
-                        </option>
-                        <option value="Femenino">Femenino</option>
-                        <option value="Mascuino">Mascuino</option>
-                      </select>
-
-                      <span className="correo-medGen">Correo electronico</span>
-                      <input
-                        type="email"
-                        required={true}
-                        className="inpCorreo-medGen"
-                      ></input>
-
-                      <span className="telefono-medGen">Telefono celular</span>
-                      <input
-                        type="email"
-                        required={true}
-                        className="inpTelefono-medGen"
-                      ></input>
-
-                      <h4 className="agendar-cita-medGen">
-                        Agendar cita para:
-                      </h4>
-                      <p className="fecha-medGen">
-                        Fecha: {selectedSlot.start.toLocaleString()}
-                      </p>
-                      {/* ...otros campos del formulario */}
-                      <button type="submit" className="btn-agendarCita-medGen">
-                        Agendar Cita
-                      </button>
-                    </div>
-                  </form>
+                  <form className="calendar-form" onSubmit={handleSubmit}>
+                  <div className="form-citasDirectorio-medGeneral">
+                    <span className="datosPaciente-medGen">Datos del paciente</span>
+            
+                    <span className="nombrePaciente-medGen">Nombre(s)</span>
+                    <input
+                      className="inpPaciente-medGen"
+                      type="text"
+                      name="nombre"
+                      value={formData.nombre}
+                      onChange={handleInputChange}
+                    />
+            
+                    {/* Otros campos del formulario */}
+                    <span className="apellidoPaciente-medGen">Apellido Paterno</span>
+                    <input
+                      className="inpApellido-medGen"
+                      type="text"
+                      name="apellidoPaterno"
+                      value={formData.apellidoPaterno}
+                      onChange={handleInputChange}
+                    />
+            
+                    <span className="apellidoMPaciente-medGen">Apellido materno</span>
+                    <input
+                      className="inpApellidoM-medGen"
+                      type="text"
+                      name="apellidoMaterno"
+                      value={formData.apellidoMaterno}
+                      onChange={handleInputChange}
+                    />
+            
+                    <span className="fechaN-medGen">Fecha de nacimiento</span>
+                    <input
+                      className="inpFechaN-medGen"
+                      type="date"
+                      name="fechaNacimiento"
+                      value={formData.fechaNacimiento}
+                      onChange={handleInputChange}
+                    />
+            
+                    <span className="sexo-medGen">Sexo</span>
+                    <select className="slcSexo-medGen" name="sexo" value={formData.sexo} onChange={handleInputChange}>
+                      <option disabled selected>
+                        Escoge
+                      </option>
+                      <option value="Femenino">Femenino</option>
+                      <option value="Masculino">Masculino</option>
+                    </select>
+            
+                    <span className="correo-medGen">Correo electrónico</span>
+                    <input
+                      className="inpCorreo-medGen"
+                      type="email"
+                      name="correo"
+                      value={formData.correo}
+                      onChange={handleInputChange}
+                    />
+            
+                    <span className="telefono-medGen">Teléfono celular</span>
+                    <input
+                      className="inpTelefono-medGen"
+                      type="tel"
+                      name="telefono"
+                      value={formData.telefono}
+                      onChange={handleInputChange}
+                    />
+            
+                    {/* ...otros campos del formulario */}
+                    <button type="submit" className="btn-agendarCita-medGen">
+                      Agendar Cita
+                    </button>
+                  </div>
+                </form>
                 )}
               </div>
             </div>

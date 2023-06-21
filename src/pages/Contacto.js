@@ -190,7 +190,7 @@ export function Contacto() {
     e.preventDefault();
 
     try {
-      await axios.post("/enviar-mensaje", {
+      await axios.post("http://localhost:9002/enviar-mensaje", {
         nombre,
         correo,
         mensaje,

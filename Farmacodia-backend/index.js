@@ -53,6 +53,23 @@ mongoose.model("UserInfo", UserDetailsSchema);
 
 const User = mongoose.model("UserInfo"); //Fin del codigo para crear el modelo.
 
+// Definición del modelo de datos
+const Schema = mongoose.Schema;
+// Definición del modelo de datos
+const citasDataSchema = new Schema({
+  nombre: String,
+  apellidoPaterno: String,
+  apellidoMaterno: String,
+  fechaNacimiento: Date,
+  sexo: String,
+  correo: String,
+  telefono: String,
+});
+
+const CitasData = mongoose.model('CitasData', citasDataSchema);
+
+
+
 //Codigo para que desde el FrontEnt mande los datos hasta aqui
 //y haga especificas acciones
 app.post("/register", async (req, res) => {
@@ -273,19 +290,62 @@ app.get('/api/citas', async (req, res) => {
     console.log(error);
     res.status(500).json({ error: 'Error al obtener las citas' });
   }
+  
 });
 
-app.post('/api/citas', async (req, res) => {
-  try {
-    const { fecha, hora, nombrePaciente, medico } = req.body;
-    const nuevaCita = new Cita({ fecha, hora, nombrePaciente, medico });
-    await nuevaCita.save();
-    res.json({ mensaje: 'Cita guardada exitosamente' });
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: 'Error al guardar la cita' });
-  }
-});
+// Ruta para guardar los datos del formulario
+app.post('/api/formdata', (req, res) => {
+  const { nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento, sexo, correo, telefono } = req.body;
+
+  const newCitasData = new CitasData({
+    nombre,
+    apellidoPaterno,
+    apellidoMaterno,
+    fechaNacimiento,
+    sexo,
+    correo,
+    telefono,
+  });
+
+  newCitasData
+    .save()
+    .then(() => res.status(201).json({ message: 'Datos guardados exitosamente' }))
+    .catch((err) => res.status(500).json({ error: 'Error al guardar los datos' }));
+
+
+    let transporter2 = nodemailer.createTransport({
+      service: "gmail",
+      port: 9002,
+      secure: false,
+      logger: true,
+      secureConnection: false,
+      auth: {
+        user: "angelde9919@gmail.com",
+        pass: "wundrnfqjzwwcxhh"
+      },
+      tls: {
+        rejectUnauthorized: true
+      }
+    })
+  
+    const mailOptions = {
+      from: 'CitasFarmacodia@gmail.com',
+      to: 'angelde9919@gmail.com', // Cambia esto por tu dirección de correo
+      subject: 'Nueva cita agendada',
+      text: `Se agendo una cita`,
+    };
+  
+    transporter2.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+        res.status(500).send('Error al enviar el mensaje');
+      } else {
+        console.log('Mensaje enviado: ' + info.response);
+        res.send('Mensaje enviado');
+      }
+    });
+  });
+
 
 //Configurando el servidor
 app.listen(9002, () => {

@@ -192,15 +192,17 @@ button[class ^= navbar]:hover{
     transform: translateX(110%);
     transition: var(--transition);
     z-index: 1000;
-    left: 5%;
+    left: 0%;
+    background-color: white;
 }
 .navbar-show{
     transform: translateX(0);
 }
 .navbar-hide-btn{
     position: absolute;
-    right: 2rem;
+    right: 100rem;
     top: 4.5rem;
+
 }
 .nav-item{
     margin: 1.4rem 0;
@@ -248,28 +250,7 @@ button[class ^= navbar]:hover{
     margin: 0 auto;
 }/*Fin del css de la barra de navegacion*/
 
-/*Css para el modo responsivo en dispotivios moviles*/
-@media(min-width: 450px){
-    .navbar-collapse{
-        width: 320px;
-    }
-    .btn-group .btn {
-        width: auto;
-    }
-    .btn-group .btn:first-child{
-        margin-right: 48px;
-        margin-bottom: 0;
-    }
-    
-}
 
-@media(min-width: 768px){
-    .header-inner-left h1{
-        font-size: 5.7rem;
-    }
-    
-    
-}
 
 @media(min-width:992px){
     .header-inner{
@@ -363,7 +344,7 @@ button[class ^= navbar]:hover{
         margin-left: 30px;
         margin-top: 0px;
     }
-
+   
 }
 
 @media(min-width: 1480px){
@@ -447,6 +428,7 @@ button[class ^= navbar]:hover{
     height: 560px;
     border-left: 2rem solid #0050d5;
     border-right: 2rem solid #0060ff;
+    border-bottom: 2rem solid #0050d5;
 }
 .texto-about{
     padding-right: 45rem;
@@ -1635,3 +1617,290 @@ funciona el test de la pagina de burgos */
   .carousel img:nth-child(3) {
     animation-delay: 7s;
   }
+
+  /*Css para el modo responsivo*/
+  @media (max-width:768px){
+    .header-inner-right{
+        position: relative;
+        bottom: 31px;
+        margin-top: 20px;
+    }
+    .about-home-image{
+        margin-top: -100px;
+        transform: scale(1.2);
+    }
+    .about-content{
+        margin-top: -60px;
+        transform: scale(.95);
+    }
+    .buscar-medicos-card{
+        transform: scale(.8);
+    }
+    .mover-card-1{
+        margin-left: -360px;
+    }
+    .info-1{
+        margin-left: 100px;
+        margin-right: 0px;
+        transform: scale(.9);
+    }
+    .info-2{
+        transform: scale(.9);
+        margin-right: 250px;
+    }
+    .directorio-img-buscar{
+        margin-left: 800px;
+        transform: scale(.95);
+    }
+    .sintomas-informacion{
+        bottom: 390px;
+        transform: scale(.94);
+        margin-left: 0px;
+        position: relative;
+    }
+    .sintomas-img{
+        margin-left: 50px;
+        margin-top: -370px;
+    }
+    .sintomas-card{
+        transform: scale(.8);
+        margin-left: 400px;
+        position: relative;
+        bottom: 50px;
+    }
+    .sintomas-card:hover{
+        transition: .5s ease-in;
+        background-color: white;
+        transform: scale(.85);    
+        .sintomas-1{
+            transition: .5s ease-in;
+            color: #0060ff;
+        }
+        .consultas-card{
+            transition: .5s ease-in;
+            color: black;
+        }
+        .sintomas-2{
+            transition: .5s ease-in;
+            color: #0050d5;
+        }
+        .sintomas-button{
+            transition: .5s ease-in;
+            background-color: #0050d5;
+            color: white;
+        }
+        
+    }
+    .sintomas-button:hover{
+        transition: .7s ease-in-out;
+        transform: scale(.98);
+    }
+    .buscar-medicos-card:hover{
+        transition: .5s ease-in-out;
+        background-color: #0060ff;
+        transform: scale(.9);
+    
+        .directorio-card{
+            transition: .7s ease-in-out;
+            color: white;
+        }
+        .encuentra-1{
+            transition: .7s ease-in-out;
+            color: #fcfbff;
+        }
+        .encuentra-2{
+            transition: .7s ease-in-out;
+            color: #d2d2d2;
+        }
+        .directorio-boton{
+            transition: .7s ease-in-out;
+            background-color: white;
+            color: #0050d5;
+        }
+    }
+    .directorio-boton:hover{
+        transition: .7s ease-out;
+        transform: scale(0.97)  ;
+    }
+    .img-logo-footer{
+        position: relative;
+        bottom: 30px;
+        left: -60px;
+    }
+    .text-redesSociales{
+        transform: scale(.95);
+        left: -60px;
+        bottom: 15px;
+        position: relative;
+    }
+    .logos-redesSociales-footer{
+        position: relative;
+        left: -50px;
+        bottom: 20px;
+    }
+    .Main-Links{
+        transform: scale(.95);
+        margin-left: -170px;
+        position: relative;
+        bottom: 20px;
+    }
+    .Other-Links{
+        transform: scale(.95);
+        margin-left: 190px;
+        position: relative;
+        bottom: 17px;
+    }
+    .img-logo2-footer{
+        transform: scale(.9);
+        margin-left: 540px;
+    }
+   .text1-derechosAutor{
+    width: 450px;
+    
+    margin-left: 10px;
+   }
+   .text2-derechosAutor{
+    width: 340px;
+    margin-left:380px;
+   }
+   
+  }  
+  
+
+
+  @media (max-width:1420px){
+    .header-inner-right{
+        transform: scale(.9);
+        margin-right: 40px;
+        margin-left: -40px;
+        margin-bottom: -50px;
+    }
+  }
+  @media (max-width: 1340px){
+    .header-inner-right{
+        transform: scale(.85);
+        margin-left: -90px;
+        margin-bottom: -80px;
+    }
+    .nav-link{
+        position: relative;
+        left: -100px;
+    }
+    .info-1{
+        margin-left: -70px;
+    }
+    .mover-card-1{
+        margin-left: -340px;
+    }
+    .text2-derechosAutor{
+        margin-left: 850px;
+    }
+}
+
+@media (max-width: 1290px){
+
+    .header-inner-right{
+        transform: scale(1.2);
+        margin-left: -20px;
+        margin-bottom: 20px;
+    }
+    .Border-About{
+        position: relative;
+        bottom: 70px;
+    }
+    .mover-card-2{
+        margin-left: -50px;
+    }
+    .img-logo2-footer{
+        margin-left: 950px;
+    }
+    .citas-main{
+        margin-top: -70px;
+    }
+    .nav-link{
+        left: 60px;
+    }
+    .info-1{
+        margin-left: -40px;
+    }
+    .mover-card-1
+    {
+        margin-left: -330px;
+    }
+}
+@media (max-width: 1200px){
+    .header-inner-right{
+        margin-top: -90px;
+        transform: scale(1.5);
+    }
+    .header-inner-left
+    {
+        margin-top: -150px;
+        transform: scale(.9);
+    }
+    .Border-About
+    {
+        position: relative;
+        bottom: 200px;
+    }
+    .citas-main{
+        margin-top: -200px;
+    }
+    .citas-card-1{
+        transform: scale(85%);
+        position: relative;
+        z-index: 2;
+        margin-left: -100px;
+        bottom: 70px;
+    }
+    .paciente-citas{
+        bottom: 90px;
+    }
+    .info-1{
+        margin-top: -50px;
+        margin-left: -150px;
+    }
+    .info-2{
+        margin-top: -50px;
+        margin-left: -0px;
+    }
+    .directorio-img-buscar{
+        transform: scalex(1.2);
+        margin-left: 900px;
+    }
+    .mover-card-2{
+        margin-left: -150px;
+    }
+    .img-logo2-footer{
+        margin-left: 890px;
+    }
+    .text2-derechosAutor{
+        margin: 5px;
+        position: relative;
+        bottom: 40px;
+        padding: 10px;
+        margin-left: 750px;
+    }
+    .text1-derechosAutor{
+        margin-left: 80px;
+    }
+    .navbar-collapse{
+        left:75%;
+    }
+}
+@media (max-width: 1115px){
+    .header-inner-right{
+        position: relative;
+        left: -50px;
+    }
+    .info-1{
+        transform: scale(.95);
+    }
+    .info-2{
+        transform: scale(.9);
+        margin-right: 100px;
+    }
+  
+}
+
+

@@ -476,7 +476,7 @@ useEffect(() => {
           </div>
           <div className="container-pNormal">
               {userData.subscriptionPlan ? (
-                  <h2>Actualmente ya cuentas con un plan de subscripcion en esta cuenta.</h2>
+                  <h2 className="subscrito-text1">Actualmente ya cuentas con un plan de subscripcion en esta cuenta.</h2>
                 ) : (
                   <div>
                   <TarjetaForm/>
